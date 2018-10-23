@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class="page-content">
+        <h1>JS vežba - domaći zadatak</h1>
+        <section>
+            
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 1</h2>
+            <div>
+                <p>
+                    <label for="ime">Kako se zoveš?</label>
+                    <br>
+                    <input type="text" id="ime">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="ime-but">
+                </p>
+                <p id="ime-out"></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 2</h2>
+            <div>
+                <p>
+                    <label for="godina-0">Koliko imaš godina?</label>
+                    <br>
+                    <input type="text" id="godina-0">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="godina-0-but">
+                </p>
+                <p id="godina-0-out"></p>
+            </div>
+        </section>
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 3</h2>
+            <div>
+                <p>
+                    <label for="zoves">Kako se zoveš?</label>
+                    <br>
+                    <input type="text" id="zoves">
+                    <br>
+                </p>
+                <p>
+                    <label for="year">Koliko imaš godina?</label>
+                    <br>
+                    <input type="text" id="year">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="zoves-but">
+                </p>
+                <p id="zoves-out"></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 4</h2>
+            <div>
+                <p>
+                    <label for="rodjen">Kada si rođen?</label>
+                    <br>
+                    <input type="text" id="rodjen">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="rodjen-but">
+                </p>
+                <p id="rodjen-out"></p>
+            </div>
+        </section>
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 5</h2>
+            <div>
+                <p>
+                    <label for="godina">Koliko imaš godina?</label>
+                    <br>
+                    <input type="text" id="godina">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="godina-but">
+                </p>
+                <p id="godina-out"></p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 6</h2>
+            <div>
+                <p>
+                    <label for="ime-proizvoda">Upišite ime proizvoda:</label>
+                    <br>
+                    <input type="text" id="ime-proizvoda">
+                    <br>
+                </p>
+                <p>
+                    <label for="trenutna-cena">Upišite trenutnu cenu proizvoda:</label>
+                    <br>
+                    <input type="text" id="trenutna-cena">
+                    <br>
+                </p>
+                <p>
+                    <label for="poskupljenje">Upišite cenu proizvoda posle poskupljenja:</label>
+                    <br>
+                    <input type="text" id="poskupljenje">
+                    <br>
+                </p>
+                <input type="button" value="Pošalji" id="cena-hleba-but">
+                <br>
+                <p id="cena-hleba-out"></p>
+            </div>
+        </section>
+        <section>
+            <h2 class="zadatak">&nbsp;&nbsp;Zadatak 7</h2>
+            <div>
+                <p>
+                    <label for="sirina-sobe">Koja je širina sobe?</label>
+                    <br>
+                    <input type="text" id="sirina-sobe">
+                    <br>
+                </p>
+                <p>
+                    <label for="soba2">Koja je dužina sobe?</label>
+                    <br>
+                    <input type="text" id="soba2">
+                    <br>
+                </p>
+                <p>
+                    <input type="button" value="Pošalji" id="soba-but">
+                </p>
+                <p id="soba-out"></p>
+            </div>
+        </section>
+        
+
+    </div>
+    <footer>
+        <p class="rights">Copyrights&copy;GagajaDesign</p>
+    </footer>
+
+
+
+
+    <script>
+
+        document.getElementById("ime-but").addEventListener("click", function () {
+            var ime = document.getElementById("ime").value;
+            document.getElementById("ime-out").innerHTML = "Vaše ime je " + ime + ".";
+            document.getElementById("ime-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("godina-0-but").addEventListener("click", function () {
+            var godine = document.getElementById("godina-0").value;
+            document.getElementById("godina-0-out").innerHTML = "Ti imaš " + godine + " godina.";
+            document.getElementById("godina-0-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("zoves-but").addEventListener("click", function () {
+            var ime = document.getElementById("zoves").value;
+            var godine = document.getElementById("year").value;
+            document.getElementById("zoves-out").innerHTML = "Ti se zoveš " + ime + " i imaš " + godine + " godina.";
+            document.getElementById("zoves-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("rodjen-but").addEventListener("click", function () {
+            var godiste = document.getElementById("rodjen").value;
+            var godine = 2018 - godiste;
+            document.getElementById("rodjen-out").innerHTML = "Ti imaš " + godine + " godina.";
+            document.getElementById("rodjen-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("godina-but").addEventListener("click", function () {
+            var godine = document.getElementById("godina").value;
+            var godiste = 2018 - godine;
+            document.getElementById("godina-out").innerHTML = "Ti si rođen " + godiste + " godine.";
+            document.getElementById("godina-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("cena-hleba-but").addEventListener("click", function () {
+            var ime = document.getElementById("ime-proizvoda").value;
+            var cena1 = document.getElementById("trenutna-cena").value;
+            var cena2 = document.getElementById("poskupljenje").value;
+            var procenat = (((cena2 - cena1) / cena1) * 100).toFixed(2);
+            document.getElementById("cena-hleba-out").innerHTML = ime + " je poskupeo za " + procenat + " posto.";
+            document.getElementById("cena-hleba-out").style.color = "#FF5757";
+        })
+
+        document.getElementById("soba-but").addEventListener("click", function () {
+            var a = document.getElementById("sirina-sobe").value;
+            var b = document.getElementById("soba2").value;
+            var p = b * a;
+            document.getElementById("soba-out").innerHTML = "Površina sobe je " + p + "m<sup>2<sup>";
+            document.getElementById("soba-out").style.color = "#FF5757";
+        })  
+    </script>
+
+</body>
+
+
+</html>
